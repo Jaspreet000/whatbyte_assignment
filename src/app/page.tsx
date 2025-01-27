@@ -234,7 +234,7 @@ export default function SkillTestPage() {
                 </div>
               </div>
               <p className="text-sm text-[#6B7280] mb-6">
-                You scored {scores.percentile}% percentile which is{" "}
+                <span className="font-bold">You scored {scores.percentile}% percentile </span> which is{" "}
                 {scores.percentile > 72 ? "higher" : "lower"} than the average
                 percentile 72% of all the engineers who took this assessment
               </p>
@@ -370,8 +370,8 @@ export default function SkillTestPage() {
                 </span>
               </div>
               <p className="text-sm text-[#6B7280] mb-8">
-                You scored {scores.correctAnswers} questions correct out of{" "}
-                {scores.totalQuestions}. However it still needs some
+                <span className="font-bold">You scored {scores.correctAnswers} questions correct out of{" "}
+                {scores.totalQuestions}.</span> However it still needs some
                 improvements
               </p>
               <div className="relative h-[200px] w-[200px] mx-auto">

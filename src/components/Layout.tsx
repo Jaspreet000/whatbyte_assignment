@@ -22,7 +22,7 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Sidebar */}
       <div
-        className={`fixed lg:static w-[220px] bg-white shadow-sm flex flex-col z-30 h-screen transform transition-transform duration-300 ease-in-out lg:transform-none ${
+        className={`fixed lg:sticky top-0 w-[220px] bg-white shadow-sm flex flex-col z-30 h-screen lg:h-[100dvh] transform transition-transform duration-300 ease-in-out lg:transform-none ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         }`}
       >
@@ -126,7 +126,7 @@ export default function Layout({ children }: LayoutProps) {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1">
+      <div className="flex-1 flex flex-col min-h-screen">
         {/* Top Navigation */}
         <header className="h-16 bg-white border-b flex items-center px-4 lg:px-8">
           {/* Left side - Hamburger Menu Button */}
@@ -169,7 +169,7 @@ export default function Layout({ children }: LayoutProps) {
         </header>
 
         {/* Page Content */}
-        <main className="p-2 pt-0 bg-[#F7F8FA]">{children}</main>
+        <main className="flex-1 p-2 pt-0 bg-[#F7F8FA]">{children}</main>
       </div>
     </div>
   );
